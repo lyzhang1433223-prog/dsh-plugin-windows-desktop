@@ -1,0 +1,26 @@
+{
+  "name": "dsh-plugin-windows-desktop",
+  "version": "0.1.1",
+  "description": "Windows desktop UI tools for DeepSeek Harness",
+  "type": "module",
+  "main": "./index.js",
+  "files": ["index.js", "src/", "cordis.patch.yml", "README.md", "README.zh.md", "LICENSE"],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0 <0.3.0"
+  },
+  "os": ["win32"],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.2.0 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check src/backend.js && node --test"
+  },
+  "keywords": ["deepseek-harness", "dsh-plugin", "windows", "desktop-automation"]
+}

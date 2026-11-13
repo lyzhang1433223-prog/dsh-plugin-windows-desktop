@@ -1,0 +1,3 @@
+- insert:
+    - id: windows-desktop
+      name: dsh-plugin-windows-desktop
